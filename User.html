@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My User</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		body {
+		/*css for full size background image*/
+		  background: url(http://www.zweezle.in/blog/wp-content/uploads/2015/12/Photography.jpeg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		  
+
+		  background-color: #060;
+		 
+		}
+
+		.ds-btn li{ list-style:none; float:left; padding:10px; }
+		.ds-btn li a span{padding-left:15px;padding-right:5px;width:100%;display:inline-block; text-align:left;}
+		.ds-btn li a span small{width:100%; display:inline-block; text-align:left;}
+
+		.colorgraph {
+		  height: 5px;
+		  border-top: 0;
+		  background: #c4e17f;
+		  border-radius: 5px;
+		  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  	<div class="container-fluid">
+	    	<div class="navbar-header">
+	      		<a class="navbar-brand" href="index.html"><img src="images/2.png" style="height: 30px; width: 150px;"></a>
+	    	</div>
+	    	<ul class="nav navbar-nav navbar-right">
+	    		<li id="nav-logout-btn"><a href="Login.html"  onclick="deleteCookie()"><img src="https://cdngarenanow-a.akamaihd.net/webmain/static/garenaweb/images/nav-icon-user.png"><span class="username"></span> </a></li>
+	 			<li id="nav-logout-btn"><a href="Login.html"  onclick="deleteCookie()"><span></span> <u>[Logout]</u></a></li>            
+            </ul>   
+  		</div>
+	</nav>
+
+	<div class="row">
+	    <div class="col-md-12">
+	        <div class="col-md-6 col-sm-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="container">
+							<div class="row">
+							    <div class="col-sm-7">
+										<fieldset style=" margin-bottom: 50px;">
+											<h2>Menu</h2>
+											<hr class="colorgraph" style="width: 600px; margin-right: 50px;">
+											<br>
+											    <ul class="ds-btn">
+											    	<li >
+											             <button class="btn btn-lg btn-info" id="viewprofile">
+											          <i class="glyphicon glyphicon-user pull-left"></i><span>View Profile<br><small>view information</small></span></button> 
+											        </li>
+											        <li >
+											             <button class="btn btn-lg btn-primary" id="edituser">
+											          <i class="glyphicon glyphicon-user pull-left"></i><span>Edit Profile<br><small>edit profile</small></span></button> 
+											        </li>
+											        <li>
+											             <button class="btn btn-lg btn-success " id="editpass">
+											         <i class="glyphicon glyphicon-dashboard pull-left"></i><span>Edit Password<br><small>edit password</small></span></button>  
+											        </li>
+											        <li>
+											    </ul>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  	<script type="text/javascript" src="js/bootstrap.js"></script>
+  	<script type="text/javascript" src="js/user.js"></script>
+  	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+</body>
+</html>

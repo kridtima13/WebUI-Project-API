@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style type="text/css">
+		/* Credit to bootsnipp.com for the css for the color graph */
+		.colorgraph {
+		  height: 5px;
+		  border-top: 0;
+		  background: #c4e17f;
+		  border-radius: 5px;
+		  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		}
+
+		body {
+		/*css for full size background image*/
+		  background: url(http://www.zweezle.in/blog/wp-content/uploads/2015/12/Photography.jpeg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		  
+		  height: 100%;
+		  background-color: #060;
+		 
+		}
+
+		/* Extra markup and styles for table-esque vertical and horizontal centering */
+		.site-wrapper {
+		  display: table;
+		  width: 100%;
+		  height: 100%; /* For at least Firefox */
+		  min-height: 100%;
+		  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+		          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+		}
+		.site-wrapper-inner {
+		  display: table-cell;
+		  vertical-align: top;
+		}
+		.cover-container {
+		  margin-right: auto;
+		  margin-left: auto;
+		}
+
+		/* Padding for spacing */
+		.inner {
+		  padding: 30px;
+		}
+
+
+		/*
+		 * Header
+		 */
+		.masthead-brand {
+		  margin-top: 10px;
+		  margin-bottom: 10px;
+		}
+
+		.masthead-nav > li {
+		  display: inline-block;
+		}
+		.masthead-nav > li + li {
+		  margin-left: 20px;
+		}
+		.masthead-nav > li > a {
+		  padding-right: 0;
+		  padding-left: 0;
+		  font-size: 16px;
+		  font-weight: bold;
+		  color: #fff; /* IE8 proofing */
+		  color: rgba(255,255,255,.95);
+		  border-bottom: 2px solid transparent;
+		}
+		.masthead-nav > li > a:hover,
+		.masthead-nav > li > a:focus {
+		  background-color: transparent;
+		  border-bottom-color: #a9a9a9;
+		  border-bottom-color: rgba(255,255,255,.25);
+		}
+		.masthead-nav > .active > a,
+		.masthead-nav > .active > a:hover,
+		.masthead-nav > .active > a:focus {
+		  color: #fff;
+		  border-bottom-color: #fff;
+		}
+
+		@media (min-width: 768px) {
+		  .masthead-brand {
+		    float: left;
+		  }
+		  .masthead-nav {
+		    float: right;
+		  }
+		}
+
+
+		/*
+		 * Cover
+		 */
+
+		.cover {
+		  padding: 0 20px;
+		}
+		.cover .btn-lg {
+		  padding: 10px 20px;
+		  font-weight: bold;
+		}
+
+
+		/*
+		 * Footer
+		 */
+
+		.mastfoot {
+		  color: #999; /* IE8 proofing */
+		  color: rgba(255,255,255,.5);
+		}
+
+
+		/*
+		 * Affix and center
+		 */
+
+		@media (min-width: 768px) {
+		  /* Pull out the header and footer */
+		  .masthead {
+		    position: fixed;
+		    top: 0;
+		  }
+		  .mastfoot {
+		    position: fixed;
+		    bottom: 0;
+		  }
+		  /* Start the vertical centering */
+		  .site-wrapper-inner {
+		    vertical-align: middle;
+		  }
+		  /* Handle the widths */
+		  .masthead,
+		  .mastfoot,
+		  .cover-container {
+		    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+		  }
+		}
+
+		@media (min-width: 992px) {
+		  .masthead,
+		  .mastfoot,
+		  .cover-container {
+		    width: 700px;
+		  }
+		}
+	</style>
+	
+</head>
+<body>
+	
+	<div class="site-wrapper">
+		<div class="cover-container">
+			<div class="inner">
+				<a href="index.html"><img src="images/1.png" class="masthead-brand " style="width: 170px;"></a>
+			    <ul class="nav masthead-nav">
+			        <li class="active">
+			            <a href="Login.html" >Login</a>
+			        </li>
+
+			        <li>
+			            <a href="Register.html">Register</a>
+			        </li>
+			    </ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+	    <div class="col-md-12">
+	        <div class="col-md-6 col-sm-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="container">
+							<div class="row" style="margin-left: 15px;">
+							    <div class="col-xs-6 ">
+									<h2>Sign Up</h2>
+									<hr class="colorgraph">
+									<form>
+									    <div class="form-group">
+										  	<label class=" control-label" for="username">Username</label>  
+										  	<div class=" inputGroupContainer">
+										  		<div class="input-group">
+											  		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+											   		<input type="text" class="form-control" id="username" name="username" placeholder="Username has max 12" maxlength="12" autofocus>
+										   		</div>
+										  	</div>
+										</div>
+											        
+										<div class="form-group">
+										  	<label class=" control-label"  for="password" >Password</label> 
+										    <div class=" inputGroupContainer">
+										    	<div class="input-group">
+												  	<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+												  	<input type="password" class="form-control" id="password" name="password" placeholder="Password has max length to 12" maxlength="12">
+										    	</div>
+										  	</div>
+										</div>
+										
+										<div class="form-group">
+										  	<label class=" control-label" for="con_password" >Confirm Password</label> 
+										    <div class=" inputGroupContainer">
+										    	<div class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+													<input type="password" class="form-control" id="con_password" name="con_password" placeholder="Password has max length to 12" maxlength="12">
+										    	</div>
+										  	</div>
+										</div>
+
+										<div class="form-group">
+										  	<label class="control-label" for="fname">First Name</label>  
+										  	<div class=" inputGroupContainer">
+										  		<div class="input-group">
+										  			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										  			<input type="text" class="form-control" id="fname" name="fname" placeholder="Put a First Name here.">
+										    	</div>
+										  	</div>
+										</div>
+
+										<div class="form-group">
+										  	<label class="control-label" for="lname">Last Name</label> 
+										    <div class="inputGroupContainer">
+										    	<div class="input-group">
+										  			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										  			<input type="text" class="form-control" id="lname" name="lname" placeholder="Put a Last Name here.">
+										    	</div>
+										  	</div>
+										</div>
+
+										<div class="form-group">
+										  	<label class="control-label" for="email">E-Mail</label>  
+										    <div class="inputGroupContainer">
+										    	<div class="input-group">
+										        	<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+										  			<input type="email" class="form-control" id="email" name="email" placeholder="Put an E-mail here.">
+										    	</div>
+										  	</div>
+										</div>
+ 
+										<div class="form-group">
+										  	<label class="control-label" for="tel">Phone #</label>  
+										    <div class="inputGroupContainer">
+										    	<div class="input-group">
+										        	<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+										  			<input type="text" class="form-control" id="tel" name="tel" maxlength="10" placeholder="Put a Telephone here.">
+										    	</div>
+										 	</div>
+										</div>
+										<hr class="colorgraph">
+										<div class="form-group">
+										  	<label class="col-md-4 control-label"></label>
+										  	<div class="col-md-4">
+										   		<button type="submit" class="btn btn-primary btn-block" id="signup" name="button">Register</button>
+										  	</div> 
+										</div>
+									</form>			
+									<br>
+									<br>
+									<div id="suc" style="display:none" class="alert alert-success alert-dismissable fade in">
+							          	<a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+							          	<strong>Regist Successful!!!</strong>
+							        </div>
+								</div>	
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/cache.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/Register.js"></script>
+</body>
+</html>

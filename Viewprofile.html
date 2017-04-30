@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Profile</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style type="text/css">
+
+
+        body {
+        /*css for full size background image*/
+          background: url(http://www.zweezle.in/blog/wp-content/uploads/2015/12/Photography.jpeg) no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+         
+        }
+
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  	<div class="container-fluid">
+	    	<div class="navbar-header">
+	      		<a class="navbar-brand" href="index.html"><img src="images/2.png" style="height: 30px; width: 150px;"></a>
+	    	</div>
+	    	<ul class="nav navbar-nav navbar-right">
+	    		<li id="nav-logout-btn"><a href="Login.html"><img src="https://cdngarenanow-a.akamaihd.net/webmain/static/garenaweb/images/nav-icon-user.png"><span class="username"></span> </a></li>
+	 			<li id="nav-logout-btn"><a href="Login.html"><span></span> <u>[Logout]</u></a></li>            
+            </ul>   
+  		</div>
+	</nav>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-7 col-sm-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                        <fieldset style=" margin-bottom: 50px;">
+                                            <h2 class="page-title"><span class="fname"></span>'s&nbsp;Profile </h2>
+                                            <div class="row" style="margin-left: 15px;">
+                                                 <br>
+                                                <div class="col-md-12">
+                                                    <div class="panel panel-primary">
+                                                        <div class="panel-heading">
+                                                            <h3>Profile</h3>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <form class="form-horizontal" action="#" method="POST" role="form">
+                                                                <div class="form-group">
+                                                                    <label for="username" class="col-sm-2 control-label">Username</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="text" class="col-sm-2 form-control" id="username" name="username" disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="fname" class="col-sm-2 control-label">First name</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="text" class="form-control" id="fname" name="fname" disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="lname" class="col-sm-2 control-label">Last name</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="text" class="form-control" id="lname" name="lname" disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="email" class="col-sm-2 control-label">E-Mail Address</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="email" class="form-control" id="email" name="email" disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="tel" class="col-sm-2 control-label">Telephone</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="text" class="form-control" id="tel" name="tel" disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <input type="hidden" id="username" name="username" value="E">
+                                                                <input type="hidden" id="password" name="password" value="E">
+                                                                <div class="form-group">
+                                                                    <div class="col-sm-2 col-sm-offset-5">
+                                                                        <button type="button" name="cancle" id="cancle" class="btn btn-success">Back</button>
+                                                                    </div>
+                                                                </div>
+  
+                                                            </form>
+                                                        </div>
+                                                        <div class="panel-footer panel-heading"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/EditUser.js"></script>
+
+</body>
+</html>
